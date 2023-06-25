@@ -194,9 +194,9 @@ public final class StoneworksFactory extends AbstractMachineBlock implements Rec
         NONE(
             new CustomItemStack(
                 Material.BARRIER,
-                "&c无操作",
+                "&c無操作",
                 "",
-                "&7 > 点击切换"
+                "&7 > 點擊切換"
             ),
             new Material[0],
             new Material[0]
@@ -206,12 +206,12 @@ public final class StoneworksFactory extends AbstractMachineBlock implements Rec
                 Material.FURNACE,
                 "&8烧制",
                 "",
-                "&f圆石 &8=> &f石头",
-                "&f石头 &8=> &f平滑石头",
+                "&f鵝卵石 &8=> &f石頭",
+                "&f石頭 &8=> &f平滑石頭",
                 "&f沙子 &8=> &f玻璃",
-                "&f石砖 &8=> &f裂纹石砖",
+                "&f石磚 &8=> &f裂紋石磚",
                 "",
-                "&7 > 点击切换"
+                "&7 > 點擊切換"
             ),
             new Material[] { Material.COBBLESTONE, Material.STONE, Material.SAND, Material.STONE_BRICKS },
             new Material[] { Material.STONE, Material.SMOOTH_STONE, Material.GLASS, Material.CRACKED_STONE_BRICKS }
@@ -221,10 +221,10 @@ public final class StoneworksFactory extends AbstractMachineBlock implements Rec
                 Material.DIAMOND_PICKAXE,
                 "&8粉碎",
                 "",
-                "&f圆石 &8=> &f沙砾",
-                "&f沙砾 &8=> &f沙子",
+                "&f鵝卵石 &8=> &f礫石",
+                "&f礫石 &8=> &f沙子",
                 "",
-                "&7 > 点击切换"
+                "&7 > 點擊切換"
             ),
             new Material[] { Material.COBBLESTONE, Material.GRAVEL },
             new Material[] { Material.GRAVEL, Material.SAND }
@@ -232,15 +232,15 @@ public final class StoneworksFactory extends AbstractMachineBlock implements Rec
         COMPACT(
             new CustomItemStack(
                 Material.PISTON,
-                "&8压实",
+                "&8壓實",
                 "",
-                "&f石头 &8=> &f石砖",
-                "&f花岗岩 &8=> &f磨制花岗岩",
-                "&f闪长岩 &8=> &f磨制闪长岩",
+                "&f石頭 &8=> &f石磚",
+                "&f花崗岩 &8=> &f磨製花崗岩",
+                "&f閃長岩 &8=> &f磨製閃長岩",
                 "&f安山岩 &8=> &f磨制安山岩",
                 "&f沙子 &8=> &f沙石",
                 "",
-                "&7 > 点击切换"
+                "&7 > 點擊切換"
             ),
             new Material[] { Material.STONE, Material.GRANITE, Material.DIORITE, Material.ANDESITE, Material.SAND },
             new Material[] { Material.STONE_BRICKS, Material.POLISHED_GRANITE, Material.POLISHED_DIORITE, Material.POLISHED_ANDESITE, Material.SANDSTONE }
@@ -248,13 +248,13 @@ public final class StoneworksFactory extends AbstractMachineBlock implements Rec
         TRANSFORM(
             new CustomItemStack(
                 Material.ANDESITE,
-                "&8转化",
+                "&8轉化",
                 "",
-                "&f圆石 &8=> &f安山岩",
-                "&f安山岩 &8=> &f闪长岩",
-                "&f闪长岩 &8=> &f花岗岩",
+                "&f鵝卵石 &8=> &f安山岩",
+                "&f安山岩 &8=> &f閃長岩",
+                "&f閃長岩 &8=> &f花崗岩",
                 "",
-                "&7 > 点击切换"
+                "&7 > 點擊切換"
             ),
             new Material[] { Material.COBBLESTONE, Material.ANDESITE, Material.DIORITE},
             new Material[] { Material.ANDESITE, Material.DIORITE, Material.GRANITE}
