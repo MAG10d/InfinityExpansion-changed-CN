@@ -366,7 +366,7 @@ public final class Materials {
             "REINFORCED_STRAINER",
             Material.FISHING_ROD,
             "&f強化過濾器",
-            "&7從水流中收集材料"",
+            "&7從水流中收集材料",
             "",
             LoreBuilder.speed(20)
     );
