@@ -102,8 +102,8 @@ public final class AdvancedAnvil extends AbstractEnergyCrafter {
     private void craft(BlockMenu inv, Block b, Player p) {
         Location l = b.getLocation();
         if (getCharge(l) < this.energy) { //not enough energy
-            p.sendMessage(ChatColor.RED + "电力不足!",
-                    ChatColor.GREEN + "当前电力: " + ChatColor.RED + getCharge(l) + ChatColor.GREEN + "/" + this.energy + " J");
+            p.sendMessage(ChatColor.RED + "能量不足!",
+                    ChatColor.GREEN + "充能: " + ChatColor.RED + getCharge(l) + ChatColor.GREEN + "/" + this.energy + " J");
             return;
         }
 
@@ -112,19 +112,19 @@ public final class AdvancedAnvil extends AbstractEnergyCrafter {
         ItemStack item2 = inv.getItemInSlot(INPUT_SLOTS[1]);
 
         if (item1 == null || item2 == null || (item2.getType() != Material.ENCHANTED_BOOK && item1.getType() != item2.getType())) {
-            p.sendMessage(ChatColor.RED + "物品无效!");
+            p.sendMessage(ChatColor.RED + "無效物品!");
             return;
         }
 
         ItemStack output = getOutput(item1, item2);
 
         if (output == null) {
-            p.sendMessage(ChatColor.RED + "无法升级!");
+            p.sendMessage(ChatColor.RED + "無法升級!");
             return;
         }
 
         if (!inv.fits(output, OUTPUT_SLOTS)) {
-            p.sendMessage(ChatColor.GOLD + "空间不足!");
+            p.sendMessage(ChatColor.GOLD + "空間不足!");
             return;
         }
 
@@ -230,14 +230,14 @@ public final class AdvancedAnvil extends AbstractEnergyCrafter {
         ItemStack item2 = inv.getItemInSlot(INPUT_SLOTS[1]);
 
         if (item1 == null || item2 == null || (item2.getType() != Material.ENCHANTED_BOOK && item1.getType() != item2.getType())) {
-            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.BARRIER, "&c无效物品!"));
+            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.BARRIER, "&c無效物品!"));
             return;
         }
 
         ItemStack output = getOutput(item1, item2);
 
         if (output == null) {
-            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.BARRIER, "&c无法升级!"));
+            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.BARRIER, "&c無法升級!"));
             return;
         }
 
