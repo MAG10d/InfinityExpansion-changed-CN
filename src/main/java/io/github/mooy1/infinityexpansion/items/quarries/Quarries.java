@@ -29,8 +29,8 @@ public final class Quarries {
     public static final SlimefunItemStack BASIC_QUARRY = new SlimefunItemStack(
             "BASIC_QUARRY",
             Material.CHISELED_SANDSTONE,
-            "&9基础矿机",
-            "&7自动挖主世界矿物",
+            "&9基本採石場",
+            "&7自動開採主世界的礦物",
             "",
             MachineLore.speed(1),
             MachineLore.energyPerSecond(300)
@@ -38,8 +38,8 @@ public final class Quarries {
     public static final SlimefunItemStack ADVANCED_QUARRY = new SlimefunItemStack(
             "ADVANCED_QUARRY",
             Material.CHISELED_RED_SANDSTONE,
-            "&c高级矿机",
-            "&7自动挖主世界和下界矿物",
+            "&c高級採石場",
+            "&7自動開採主世界與地獄的礦物",
             "",
             MachineLore.speed(3), // 魔改，2
             MachineLore.energyPerSecond(900)
@@ -47,8 +47,8 @@ public final class Quarries {
     public static final SlimefunItemStack VOID_QUARRY = new SlimefunItemStack(
             "VOID_QUARRY",
             Material.CHISELED_NETHER_BRICKS,
-            "&8虚空矿机",
-            "&7自动挖主世界和下界矿物",
+            "&8虛空採石場",
+            "&7自動開採主世界與地獄的礦物",
             "",
             MachineLore.speed(9), // 魔改，6
             MachineLore.energyPerSecond(3600)
@@ -56,8 +56,8 @@ public final class Quarries {
     public static final SlimefunItemStack INFINITY_QUARRY = new SlimefunItemStack(
             "INFINITY_QUARRY",
             Material.CHISELED_POLISHED_BLACKSTONE,
-            "&b无尽矿机",
-            "&7自动挖主世界和下界矿物",
+            "&b無限採石場",
+            "&7自動開採主世界與地獄的礦物",
             "",
             MachineLore.speed(64),
             MachineLore.energyPerSecond(36000)
