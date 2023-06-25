@@ -39,7 +39,7 @@ public final class Util {
         }
         lore.add("");
         lore.add(ChatColor.GREEN + "-------------------");
-        lore.add(ChatColor.GREEN + "\u21E8 点击合成");
+        lore.add(ChatColor.GREEN + "\u21E8 點擊合成");
         lore.add(ChatColor.GREEN + "-------------------");
         output.setItemMeta(meta);
         return output;
@@ -58,9 +58,9 @@ public final class Util {
                 else if (level != 0) {
                     section.set(path, 0);
                     InfinityExpansion.log(Level.WARNING,
-                            "附魔等级 " + level
+                            "附魔等級 " + level
                                     + " 超出限制 " + e.getKey()
-                                    + ", 正在恢复为默认值!"
+                                    + ", 正在恢復為預設值!"
                     );
                 }
             }
