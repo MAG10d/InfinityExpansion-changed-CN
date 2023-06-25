@@ -40,7 +40,7 @@ import me.mrCookieSlime.Slimefun.api.inventory.DirtyChestMenu;
 public final class StrainerBase extends TickingMenuBlock implements RecipeDisplayItem {
 
 
-    private static final ItemStack POTATO = new CustomItemStack(Material.POTATO, "&7:&6土豆鱼&7:", "&e幸运");
+    private static final ItemStack POTATO = new CustomItemStack(Material.POTATO, "&7:&6馬鈴薯魚&7:", "&e幸運");
     private static final int STATUS_SLOT = 10;
     private static final int[] OUTPUT_SLOTS = {
             13, 14, 15, 16,
@@ -153,7 +153,7 @@ public final class StrainerBase extends TickingMenuBlock implements RecipeDispla
         if (speed == 0) {
 
             if (inv.hasViewer()) {
-                inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.BARRIER, "&c放入滤网!"));
+                inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.BARRIER, "&c放入過濾器!"));
             }
 
             return;
@@ -196,7 +196,7 @@ public final class StrainerBase extends TickingMenuBlock implements RecipeDispla
         inv.pushItem(output.clone(), OUTPUT_SLOTS);
 
         if (inv.hasViewer()) {
-            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&a打捞到材料!"));
+            inv.replaceExistingItem(STATUS_SLOT, new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&a已收集到材料!"));
         }
 
         //reduce durability
