@@ -47,8 +47,8 @@ public final class StorageCache {
 
     /* Menu strings */
     private static final String EMPTY_DISPLAY_NAME = ChatColor.WHITE + "空";
-    private static final String VOID_EXCESS_TRUE = ChatColors.color("&7存储满时清空输入:&e 开");
-    private static final String VOID_EXCESS_FALSE = ChatColors.color("&7存储满时清空输入:&e 关");
+    private static final String VOID_EXCESS_TRUE = ChatColors.color("&7將過多移至虛空:&e true");
+    private static final String VOID_EXCESS_FALSE = ChatColors.color("&7將過多移至虛空:&e false");
 
     /* BlockStorage keys */
     private static final String STORED_AMOUNT = "stored"; // amount key in block data
