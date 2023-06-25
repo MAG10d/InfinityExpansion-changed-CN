@@ -73,17 +73,17 @@ public final class EnergyGenerator extends MenuBlock implements EnergyNetProvide
             if (gen == 0) {
                 inv.replaceExistingItem(4, new CustomItemStack(
                         Material.GREEN_STAINED_GLASS_PANE,
-                        "&c未发电",
-                        "&7已储存: &6" + MachineLore.format(getCharge(l)) + " J"
+                        "&c未發電",
+                        "&7已儲存: &6" + MachineLore.format(getCharge(l)) + " J"
                 ));
             }
             else {
                 inv.replaceExistingItem(4, new CustomItemStack(
                         Material.GREEN_STAINED_GLASS_PANE,
-                        "&a发电中",
-                        "&7类型: &6" + this.type,
-                        "&7发电速度: &6" + MachineLore.formatEnergy(gen) + " J/s ",
-                        "&7已储存: &6" + MachineLore.format(getCharge(l)) + " J"
+                        "&a發電",
+                        "&7類型: &6" + this.type,
+                        "&7發電中: &6" + MachineLore.formatEnergy(gen) + " J/s ",
+                        "&7已儲存: &6" + MachineLore.format(getCharge(l)) + " J"
                 ));
             }
         }
