@@ -19,18 +19,18 @@ import me.mrCookieSlime.Slimefun.api.BlockStorage;
 public final class SetData extends SubCommand {
 
     public SetData() {
-        super("setdata", "设置你指向的 Slimefun 方块的数据", "infinityexpansion.setdata");
+        super("setdata", "設定你所看的方塊的 slimefun 方塊資料", "infinityexpansion.setdata");
     }
 
     @Override
     protected void execute(@Nonnull CommandSender commandSender, @Nonnull String[] strings) {
         if (!(commandSender instanceof Player)) {
-            commandSender.sendMessage("只有玩家可以使用该指令!");
+            commandSender.sendMessage("只有玩家可以使用該指令!");
             return;
         }
 
         if (strings.length != 2) {
-            commandSender.sendMessage(ChatColor.RED + "你必须指定键和值!");
+            commandSender.sendMessage(ChatColor.RED + "你必須指定鍵和值!");
             return;
         }
 
@@ -39,19 +39,19 @@ public final class SetData extends SubCommand {
         Block target = p.getTargetBlockExact(8, FluidCollisionMode.NEVER);
 
         if (target == null || target.getType() == Material.AIR) {
-            p.sendMessage(ChatColor.RED + "你必须指着一个方块才能执行该指令!");
+            p.sendMessage(ChatColor.RED + "你必須指著一個方塊才能執行該指令!");
             return;
         }
 
         String id = BlockStorage.getLocationInfo(target.getLocation(), "id");
 
         if (id == null) {
-            p.sendMessage(ChatColor.RED + "你必须指着一个 Slimefun 方块才能执行该指令!");
+            p.sendMessage(ChatColor.RED + "你必須指著一個 Slimefun 方塊才能執行該指令!");
             return;
         }
 
         if (strings[0].equals("id")) {
-            p.sendMessage(ChatColor.RED + "你不能更改方块的 id，这可能会导致内部问题!");
+            p.sendMessage(ChatColor.RED + "你不能更改方塊的 id，這可能會導致內部問題!");
             return;
         }
 
@@ -60,7 +60,7 @@ public final class SetData extends SubCommand {
             BlockStorage.addBlockInfo(target, strings[1], null);
         }
         else {
-            p.sendMessage(ChatColor.GREEN + "已设置 " + id + "中 '" + strings[0] + "' 的值为 '" + strings[1] + "'");
+            p.sendMessage(ChatColor.GREEN + "已設置 " + id + "中 '" + strings[0] + "' 的值為 '" + strings[1] + "'");
             BlockStorage.addBlockInfo(target, strings[0], strings[1]);
         }
 
