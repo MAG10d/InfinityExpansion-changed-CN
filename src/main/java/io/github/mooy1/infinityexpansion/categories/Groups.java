@@ -16,24 +16,24 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 public final class Groups {
 
     public static final ItemGroup INFINITY = new InfinityGroup(InfinityExpansion.createKey("infinity_recipes"),
-            new CustomItemStack(Material.RESPAWN_ANCHOR, "&b无尽&7物品"), 3);
+            new CustomItemStack(Material.RESPAWN_ANCHOR, "&b無限&7配方"), 3);
     public static final ItemGroup MAIN_MATERIALS = new SubGroup("main_materials",
-            new CustomItemStack(Material.NETHER_STAR, "&b无尽&7基础材料"));
+            new CustomItemStack(Material.NETHER_STAR, "&b無限&7材料"));
     public static final ItemGroup BASIC_MACHINES = new SubGroup("basic_machines",
-            new CustomItemStack(Material.LOOM, "&9无尽&7基础机器"));
+            new CustomItemStack(Material.LOOM, "&9基礎&7機器"));
     public static final ItemGroup ADVANCED_MACHINES = new SubGroup("advanced_machines",
-            new CustomItemStack(Material.BLAST_FURNACE, "&c无尽&7高级机器"));
+            new CustomItemStack(Material.BLAST_FURNACE, "&c進階&7機器"));
     public static final ItemGroup STORAGE = new SubGroup("storage",
-            new CustomItemStack(Material.BEEHIVE, "&6无尽&7存储"));
+            new CustomItemStack(Material.BEEHIVE, "&6儲存"));
     public static final ItemGroup MOB_SIMULATION = new SubGroup("mob_simulation",
-            new CustomItemStack(Material.BEACON, "&b生物模拟"));
+            new CustomItemStack(Material.BEACON, "&b怪物模擬"));
     public static final ItemGroup INFINITY_MATERIALS = new SubGroup("infinity_materials",
-            new CustomItemStack(Material.NETHERITE_BLOCK, "&b无尽&a材料"));
+            new CustomItemStack(Material.NETHERITE_BLOCK, "&b無限&a材料"));
     public static final ItemGroup MAIN_CATEGORY = new MultiGroup("main",
-            new CustomItemStack(Material.NETHER_STAR, "&kl&b无尽&4贪婪&kl"), 3,
+            new CustomItemStack(Material.NETHER_STAR, "&b無限&7附加&kl"), 3,
             MAIN_MATERIALS, BASIC_MACHINES, ADVANCED_MACHINES, STORAGE, MOB_SIMULATION, INFINITY_MATERIALS, INFINITY);
     public static final ItemGroup INFINITY_CHEAT = new SubGroup("infinity_cheat",
-            new CustomItemStack(Material.RESPAWN_ANCHOR, "&b无尽&7物品 &c- 错误配方, 请从无尽工作台中查看正确配方"));
+            new CustomItemStack(Material.RESPAWN_ANCHOR, "&b無限&7物品 &c- 錯誤配方, 請從無限工作台中查看正確配方"));
 
     public static void setup(InfinityExpansion inst) {
         INFINITY.register(inst);
