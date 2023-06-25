@@ -36,7 +36,7 @@ public final class InfinityWorkbench extends io.github.mooy1.infinitylib.machine
     private static final int RECIPE_SLOT = 7;
     public static final MachineRecipeType TYPE = new MachineRecipeType("infinity_forge",
             new CustomItemStack(Blocks.INFINITY_FORGE, Blocks.INFINITY_FORGE.getDisplayName(),
-                    "", "&c配方显示不完整，请从无尽工作台查看正确的配方!"));
+                    "", "&c配方顯示不完整，請從無限配方目錄來查看正確的配方!"));
 
     private final int energy;
 
@@ -79,8 +79,8 @@ public final class InfinityWorkbench extends io.github.mooy1.infinitylib.machine
         int charge = getCharge(menu.getLocation());
         if (charge < this.energy) {
             p.sendMessage(
-                    ChatColor.RED + "电力不足!",
-                    ChatColor.GREEN + "当前电力: " + ChatColor.RED + charge + ChatColor.GREEN + "/" + this.energy + " J"
+                    ChatColor.RED + "能量不足!",
+                    ChatColor.GREEN + "充能: " + ChatColor.RED + charge + ChatColor.GREEN + "/" + this.energy + " J"
             );
         }
         else {
