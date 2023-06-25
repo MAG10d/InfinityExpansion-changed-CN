@@ -28,12 +28,12 @@ public final class InfinityMatrix extends SimpleSlimefunItem<ItemUseHandler> imp
     }
 
     private static void disableFlight(Player p) {
-        p.sendMessage(ChatColor.RED + "无尽飞行已禁用!");
+        p.sendMessage(ChatColor.RED + "無限飛行已關閉!");
         p.setAllowFlight(false);
     }
 
     private static void enableFlight(Player p) {
-        p.sendMessage(ChatColor.GREEN + "无尽飞行已启用!");
+        p.sendMessage(ChatColor.GREEN + "無限飛行已啟用!");
         p.setAllowFlight(true);
     }
 
@@ -62,7 +62,7 @@ public final class InfinityMatrix extends SimpleSlimefunItem<ItemUseHandler> imp
                     String uuid = ChatColor.stripColor(line).substring(6);
 
                     if (!p.getUniqueId().toString().equals(uuid)) {
-                        p.sendMessage(ChatColor.YELLOW + "你不是飞行器的主人!");
+                        p.sendMessage(ChatColor.YELLOW + "你不是矩陣的主人!");
                         return;
                     }
 
@@ -70,7 +70,7 @@ public final class InfinityMatrix extends SimpleSlimefunItem<ItemUseHandler> imp
                         iterator.remove();
                         meta.setLore(lore);
                         item.setItemMeta(meta);
-                        p.sendMessage(ChatColor.GOLD + "已解除绑定飞行器!");
+                        p.sendMessage(ChatColor.GOLD + "所有權已移除!");
                         disableFlight(p);
 
                     }
