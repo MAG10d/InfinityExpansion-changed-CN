@@ -40,9 +40,9 @@ public final class Quarry extends AbstractMachineBlock implements RecipeDisplayI
     private static final ItemStack MINING = new CustomItemStack(Material.LIME_STAINED_GLASS_PANE, "&a采矿中...");
     private static final ItemStack OSCILLATOR_INFO = new CustomItemStack(
             Material.CYAN_STAINED_GLASS_PANE,
-            "&b生产加速器槽",
-            "&7放置一个生产加速器",
-            "&7提高某些材料的生产速率!"
+            "&b振盪器欄位",
+            "&7放置採石場振盪器",
+            "&7來提高特定材料的生產效率!"
     );
     private static final int[] OUTPUT_SLOTS = {
             9, 10, 11, 12, 13, 14, 15, 16, 17,
