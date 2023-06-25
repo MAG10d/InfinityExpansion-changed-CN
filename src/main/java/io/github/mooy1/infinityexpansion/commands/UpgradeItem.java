@@ -29,21 +29,21 @@ public final class UpgradeItem extends SubCommand {
     private final Cooldown<UUID> cooldown = new Cooldown<>();
 
     public UpgradeItem() {
-        super("upgradeitem", "升级手中物品", false);
+        super("upgradeitem", "升級手中物品", false);
     }
 
     @Override
     protected void execute(@Nonnull CommandSender commandSender, @Nonnull String[] strings) {
         if (!(commandSender instanceof Player)) {
-            commandSender.sendMessage(ChatColor.RED + "只有玩家才能执行该指令!");
+            commandSender.sendMessage(ChatColor.RED + "只有玩家才能執行該指令!");
             return;
         }
 
         Player p = (Player) commandSender;
 
-        // 使用频率限制
+        // 使用頻率限制
         if (!cooldown.check(p.getUniqueId())) {
-            p.sendMessage(ChatColor.RED + "该指令使用过于频繁，请稍后再试!");
+            p.sendMessage(ChatColor.RED + "該指令使用過於頻繁，請稍後再試!");
             return;
         }
         cooldown.set(p.getUniqueId(), 5000);
@@ -51,14 +51,14 @@ public final class UpgradeItem extends SubCommand {
         ItemStack item = p.getInventory().getItemInMainHand();
 
         if (item.getType() == Material.AIR) {
-            p.sendMessage(ChatColor.RED + "你必须手持一个物品!");
+            p.sendMessage(ChatColor.RED + "你必須手持一個物品!");
             return;
         }
 
-        // 无尽贪婪物品检测
+        // 無盡貪婪物品檢測
         SlimefunItem sfItem = SlimefunItem.getByItem(item);
         if (sfItem == null || !(sfItem.getAddon() instanceof InfinityExpansion)) {
-            p.sendMessage(ChatColor.RED + "你手持的不是无尽贪婪的物品!");
+            p.sendMessage(ChatColor.RED + "你手持的不是無盡貪婪的物品!");
             return;
         }
 
@@ -72,17 +72,17 @@ public final class UpgradeItem extends SubCommand {
                 ItemStack displayItem = pdc.get(StorageUnit.ITEM_KEY(), PersistentType.ITEM_STACK_OLD);
                 SlimefunItem displaySfItem = SlimefunItem.getByItem(displayItem);
                 if (displaySfItem == null || !(sfItem.getAddon() instanceof InfinityExpansion)) {
-                    p.sendMessage(ChatColor.RED + "存储单元内的物品不是无尽贪婪物品, 不需要更新!");
+                    p.sendMessage(ChatColor.RED + "儲存單元內的物品不是無盡貪婪物品, 不需要更新!");
                     return;
                 }
-                p.sendMessage(ChatColor.YELLOW + "正在检测存储单元内的物品...");
+                p.sendMessage(ChatColor.YELLOW + "正在檢測儲存單元內的物品...");
                 upgradeItem(p, displayItem, displaySfItem);
 
                 ItemMeta newMeta = sfItem.getItem().getItemMeta();
-                // 更新存储单元
+                // 更新儲存單元
                 StorageUnit.saveToStack(newMeta, displayItem, displaySfItem.getItemName(), amount);
                 item.setItemMeta(newMeta);
-                p.sendMessage(ChatColor.GREEN + "已更新存储单元内的物品");
+                p.sendMessage(ChatColor.GREEN + "已更新儲存單元內的物品");
             }
         } else {
             upgradeItem(p, item, sfItem);
@@ -101,11 +101,11 @@ public final class UpgradeItem extends SubCommand {
         if (meta.getDisplayName().equals(sfItem.getItemName())) {
             if (newMeta.hasLore()) {
                 if (meta.getLore().equals(newMeta.getLore())) {
-                    p.sendMessage(ChatColor.RED + "该物品名称与说明不需要更新!");
+                    p.sendMessage(ChatColor.RED + "該物品名稱與說明不需要更新!");
                     return;
                 }
             } else {
-                p.sendMessage(ChatColor.RED + "该物品名称与说明不需要更新!");
+                p.sendMessage(ChatColor.RED + "該物品名稱與說明不需要更新!");
                 return;
             }
         }
@@ -116,6 +116,6 @@ public final class UpgradeItem extends SubCommand {
         }
 
         item.setItemMeta(meta);
-        p.sendMessage(ChatColor.GREEN + "已更新物品名称与说明!");
+        p.sendMessage(ChatColor.GREEN + "已更新物品名稱與說明!");
     }
 }
