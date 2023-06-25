@@ -34,54 +34,54 @@ public final class Gear {
     public static final SlimefunItemStack ENDER_FLAME = new SlimefunItemStack(
             "ENDER_FLAME",
             Material.ENCHANTED_BOOK,
-            "&c末影之焰"
+            "&c終界火焰"
     );
     public static final SlimefunItemStack CROWN = new SlimefunItemStack(
             "INFINITY_CROWN",
             Material.NETHERITE_HELMET,
-            "&b无尽头盔",
-            "&7夜视 I",
-            "&7潮涌能量 I",
+            "&b無限頭冠",
+            "&7夜視 I",
+            "&7海靈祝福 I",
             "&7力量 V",
-            "&7鞘翅动能免疫"
+            "&7免疫鞘翅墜落傷害"
     );
     public static final SlimefunItemStack CHESTPLATE = new SlimefunItemStack(
             "INFINITY_CHESTPLATE",
             Material.NETHERITE_CHESTPLATE,
-            "&b无尽胸甲",
+            "&b無限胸甲",
             "&7力量 II",
-            "&7生命提升 I",
-            "&7火焰抗性 I",
-            "&7伤害吸收 II",
-            "&7蜜蜂毒针保护"
+            "&7生命值提升 I",
+            "&7抗性 I",
+            "&7抗火 I",
+            "&7免疫蜜蜂螫"
     );
     public static final SlimefunItemStack LEGGINGS = new SlimefunItemStack(
             "INFINITY_LEGGINGS",
             Material.NETHERITE_LEGGINGS,
-            "&b无尽护腿",
-            "&7急迫 III",
-            "&7生命恢复 I",
+            "&b無限護腿",
+            "&7挖掘加速 III",
+            "&7回復 I",
             "&7力量 V",
-            "&7饱和 I",
-            "&7抗辐射"
+            "&7飽食 I",
+            "&7抗輻射"
     );
     public static final SlimefunItemStack BOOTS = new SlimefunItemStack(
             "INFINITY_BOOTS",
             Material.NETHERITE_BOOTS,
-            "&b无尽靴子",
+            "&b無限靴子",
             "&7力量 V",
-            "&7幸运",
-            "&7速度 III",
-            "&7海豚的恩惠 I"
+            "&7幸運",
+            "&7加速 III",
+            "&7海豚悠游 I"
     );
     public static final SlimefunItemStack INFINITY_MATRIX = new SlimefunItemStack(
             "INFINITY_MATRIX",
             Material.NETHER_STAR,
-            "&f无尽飞行器",
-            "&6给予你像创造模式一样的飞行能力",
-            "&7右键 启用/关闭飞行并且绑定自己",
-            "&7蹲下右键移除自己的绑定",
-            "&b灵魂绑定"
+            "&f無限矩陣",
+            "&6給予你無限飛行",
+            "&7右鍵點擊以 啟用/關閉與聲明",
+            "&7蹲下並右鍵 來移除所有權",
+            "&b靈魂綁定"
     );
     public static final SlimefunItemStack SHIELD = new SlimefunItemStack(
             "INFINITY_SHIELD",
@@ -91,34 +91,33 @@ public final class Gear {
     public static final SlimefunItemStack BLADE = new SlimefunItemStack(
             "INFINITY_BLADE",
             Material.NETHERITE_SWORD,
-            "&b寰宇支配之剑"
+            "&b宇宙之刃"
     );
     public static final SlimefunItemStack PICKAXE = new SlimefunItemStack(
             "INFINITY_PICKAXE",
             Material.NETHERITE_PICKAXE,
-            "&9世界崩解之镐"
+            "&9世界破壞者"
     );
     public static final SlimefunItemStack AXE = new SlimefunItemStack(
             "INFINITY_AXE",
             Material.NETHERITE_AXE,
-            "&4自然荒芜之斧"
+            "&4自然的廢墟"
     );
     public static final SlimefunItemStack SHOVEL = new SlimefunItemStack(
             "INFINITY_SHOVEL",
             Material.NETHERITE_SHOVEL,
-            "&a星球吞噬之铲"
+            "&a噬山者"
     );
     public static final SlimefunItemStack BOW = new SlimefunItemStack(
             "INFINITY_BOW",
             Material.BOW,
-            "&6天堂陨落长弓"
+            "&6天空穿刺者"
     );
     public static final SlimefunItemStack VEIN_MINER_RUNE = new SlimefunItemStack(
             "VEIN_MINER_RUNE",
             Material.DIAMOND,
-            "&b矿脉符文",
-            "&7升级工具以开采某些材料",
-            "&7将此符文与工具融合"
+            "&b礦脈礦工符文",
+            "&7升級工具來連鎖挖一些材料"
     );
 
     public static void setup(InfinityExpansion plugin) {
@@ -271,7 +270,7 @@ public final class Gear {
             else {
                 lore = new ArrayList<>();
             }
-            lore.add(ChatColor.AQUA + "灵魂绑定");
+            lore.add(ChatColor.AQUA + "靈魂綁定");
             meta.setLore(lore);
 
             // find path
