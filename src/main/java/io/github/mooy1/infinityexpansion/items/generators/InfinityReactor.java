@@ -208,7 +208,7 @@ public final class InfinityReactor extends MenuBlock implements EnergyNetProvide
         items.add(null);
 
         item = new CustomItemStack(Materials.VOID_INGOT, Materials.VOID_INGOT.getDisplayName(),
-                "", ChatColor.GOLD + "持續 4 小时");
+                "", ChatColor.GOLD + "持續 4 小時");
         items.add(item);
         items.add(null);
 
