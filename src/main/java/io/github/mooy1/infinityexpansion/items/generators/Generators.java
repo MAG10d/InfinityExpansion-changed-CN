@@ -32,8 +32,9 @@ public final class Generators {
     public static final SlimefunItemStack INFINITY_REACTOR = new SlimefunItemStack(
             "INFINITY_REACTOR",
             Material.BEACON,
-            "&b无尽反应堆",
-            "&7利用无尽锭和虚空锭组合发电",
+            "&b無限反應爐",
+            "&7通過壓縮發電",
+            "&7於&8虛無&7和&b無限&7錠",
             "",
             MachineLore.energyBuffer(INFINITY_REACTOR_ENERGY * 1000),
             MachineLore.energyPerSecond(INFINITY_REACTOR_ENERGY)
@@ -41,9 +42,8 @@ public final class Generators {
     public static final SlimefunItemStack HYDRO = new SlimefunItemStack(
             "HYDRO_GENERATOR",
             Material.PRISMARINE_WALL,
-            "&9水力发电机",
-            "&7利用水流发电",
-            "&7使用方法: 使发电机成为含水方块",
+            "&9水力發電機",
+            "&7在流動的水中產生能量",
             "",
             MachineLore.energyBuffer(HYDRO_ENERGY * 100),
             MachineLore.energyPerSecond(HYDRO_ENERGY)
@@ -51,9 +51,9 @@ public final class Generators {
     public static final SlimefunItemStack REINFORCED_HYDRO = new SlimefunItemStack(
             "REINFORCED_HYDRO_GENERATOR",
             Material.END_STONE_BRICK_WALL,
-            "&f高级&9水力发电机",
-            "&7利用水流发电",
-            "&7使用方法: 使发电机成为含水方块",
+            "&f強化&9水力發電機",
+            "&7產生更多的能量",
+            "&7從流動的水中",
             "",
             MachineLore.energyBuffer(ADVANCED_HYDRO_ENERGY * 100),
             MachineLore.energyPerSecond(ADVANCED_HYDRO_ENERGY)
@@ -61,8 +61,8 @@ public final class Generators {
     public static final SlimefunItemStack GEOTHERMAL = new SlimefunItemStack(
             "GEOTHERMAL_GENERATOR",
             Material.MAGMA_BLOCK,
-            "&c地热发电机",
-            "&7利用地热发电",
+            "&c地熱發電機",
+            "&7從世界的熱能中產生能量",
             "",
             MachineLore.energyBuffer(GEO_ENERGY * 100),
             MachineLore.energyPerSecond(GEO_ENERGY)
@@ -70,8 +70,9 @@ public final class Generators {
     public static final SlimefunItemStack REINFORCED_GEOTHERMAL = new SlimefunItemStack(
             "REINFORCED_GEOTHERMAL_GENERATOR",
             Material.SHROOMLIGHT,
-            "&f高级&c地热发电机",
-            "&7利用地热发电",
+            "&f強化&c地熱發電機",
+            "&7產生更多的能量",
+            "&7從世界的熱能中",
             "",
             MachineLore.energyBuffer(ADVANCED_GEO_ENERGY * 100),
             MachineLore.energyPerSecond(ADVANCED_GEO_ENERGY)
@@ -79,8 +80,8 @@ public final class Generators {
     public static final SlimefunItemStack BASIC_PANEL = new SlimefunItemStack(
             "BASIC_PANEL",
             Material.BLUE_GLAZED_TERRACOTTA,
-            "&9基础太阳能发电机",
-            "&7利用太阳能发电",
+            "&9基本太陽能板",
+            "&7從太陽產生能量",
             "",
             MachineLore.energyBuffer(BASIC_SOLAR_ENERGY * 100),
             MachineLore.energyPerSecond(BASIC_SOLAR_ENERGY)
@@ -88,8 +89,8 @@ public final class Generators {
     public static final SlimefunItemStack ADVANCED_PANEL = new SlimefunItemStack(
             "ADVANCED_PANEL",
             Material.RED_GLAZED_TERRACOTTA,
-            "&c高级太阳能发电机",
-            "&7利用太阳能发电",
+            "&c高級太陽能板",
+            "&7從太陽產生能量",
             "",
             MachineLore.energyBuffer(ADVANCED_SOLAR_ENERGY * 100),
             MachineLore.energyPerSecond(ADVANCED_SOLAR_ENERGY)
@@ -97,8 +98,8 @@ public final class Generators {
     public static final SlimefunItemStack CELESTIAL_PANEL = new SlimefunItemStack(
             "CELESTIAL_PANEL",
             Material.YELLOW_GLAZED_TERRACOTTA,
-            "&e超级太阳能发电机",
-            "&7利用太阳能发电",
+            "&e天體面板",
+            "&7從太陽產生能量",
             "",
             MachineLore.energyBuffer(CELESTIAL_ENERGY * 100),
             MachineLore.energyPerSecond(CELESTIAL_ENERGY)
@@ -106,28 +107,28 @@ public final class Generators {
     public static final SlimefunItemStack VOID_PANEL = new SlimefunItemStack(
             "VOID_PANEL",
             Material.LIGHT_GRAY_GLAZED_TERRACOTTA,
-            "&8虚空发电机",
-            "&7利用暗能量发电",
+            "&8虛空面板",
+            "&7從黑暗中產生能量",
             "",
             MachineLore.energyBuffer(VOID_ENERGY * 100),
             MachineLore.energyPerSecond(VOID_ENERGY)
     );
-    // 魔改：光隙发电机
+    // 魔改：光隙發電機
     public static final SlimefunItemStack LUMINA_PANEL = new SlimefunItemStack(
             "LUMINA_PANEL",
             Material.REDSTONE_LAMP,
-            "&8光隙发电机",
-            "&7光隙明灭之所在，能量随之迸发...",
+            "&8光隙發電機",
+            "&7光隙明滅之所在，能量隨之迸發...",
             "",
             MachineLore.energyBuffer(VOID_ENERGY * 300),
             MachineLore.energyPerSecond(VOID_ENERGY * 4)
     );
-    // 魔改：湮光发电机
+    // 魔改：湮光發電機
     public static final SlimefunItemStack LUMINA_END_PANEL = new SlimefunItemStack(
             "LUMINA_END_PANEL",
             Material.BEACON,
-            "&8湮光发电机",
-            "&7狄拉克之海潮起潮落，而终极的能量之门向你敞开...",
+            "&8湮光發電機",
+            "&7狄拉克之海潮起潮落，而終極的能量之門向你敞開...",
             "",
             MachineLore.energyBuffer(INFINITY_ENERGY * 1000),
             MachineLore.energyPerSecond(INFINITY_ENERGY * 10)
@@ -135,8 +136,8 @@ public final class Generators {
     public static final SlimefunItemStack INFINITE_PANEL = new SlimefunItemStack(
             "INFINITE_PANEL",
             Material.LIGHT_BLUE_GLAZED_TERRACOTTA,
-            "&b无尽发电机",
-            "&7利用宇宙能量发电",
+            "&b無限面板",
+            "&7從宇宙中產生能量",
             "",
             MachineLore.energyBuffer(INFINITY_ENERGY * 100),
             MachineLore.energyPerSecond(INFINITY_ENERGY)
