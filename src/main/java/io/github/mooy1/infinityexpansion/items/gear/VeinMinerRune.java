@@ -61,7 +61,7 @@ public final class VeinMinerRune extends SlimefunItem implements Listener, NotPl
     };
     private static final double RANGE = 2.0; // 魔改，1.5
     private static final int MAX = 128; // 魔改，64
-    private static final String LORE = ChatColor.AQUA + "已融合矿脉符文 - 按住 SHIFT 使用";
+    private static final String LORE = ChatColor.AQUA + "礦脈礦工 - 蹲下使用";
     private static final NamespacedKey key = InfinityExpansion.createKey("vein_miner");
 
     private final CoolDowns cooldowns = new CoolDowns(300); // 魔改，1000
@@ -111,16 +111,16 @@ public final class VeinMinerRune extends SlimefunItem implements Listener, NotPl
                         setVeinMiner(itemStack, true);
                         l.getWorld().dropItemNaturally(l, itemStack);
 
-                        p.sendMessage(ChatColor.GREEN + "已将矿脉符文融合至工具中!");
+                        p.sendMessage(ChatColor.GREEN + "增加礦脈礦工至工具上!");
                     }
                     else {
-                        p.sendMessage(ChatColor.RED + "无法融合矿脉符文!");
+                        p.sendMessage(ChatColor.RED + "增加礦脈礦工失敗!");
                     }
                 });
 
             }
             else {
-                p.sendMessage(ChatColor.RED + "无法融合矿脉符文!");
+                p.sendMessage(ChatColor.RED + "增加礦脈礦工失敗!");
             }
         }
     }
@@ -201,7 +201,7 @@ public final class VeinMinerRune extends SlimefunItem implements Listener, NotPl
         }
 
         if (p.getFoodLevel() == 0) {
-            p.sendMessage(ChatColor.GOLD + "你饿了，无法使用带有矿脉符文的工具!");
+            p.sendMessage(ChatColor.GOLD + "你太累了, 無法連鎖挖!");
             return;
         }
 
@@ -218,7 +218,7 @@ public final class VeinMinerRune extends SlimefunItem implements Listener, NotPl
         }
 
         if (!this.cooldowns.checkAndReset(p.getUniqueId())) {
-            p.sendMessage(ChatColor.GOLD + "你不能频繁使用带有矿脉符文的工具!");
+            p.sendMessage(ChatColor.GOLD + "你必須等待一秒鐘, 然後才能再次使用!");
             return;
         }
 
